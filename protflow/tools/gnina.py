@@ -137,7 +137,7 @@ class GNINA(Runner):
         # Initialize the GNINA class
         GNINA = GNINA()
 
-        # Run the diffusion process
+        # Run the Docking process
         results = GNINA.run(
             poses=poses,
             prefix="experiment_1",
@@ -206,11 +206,8 @@ class GNINA(Runner):
             prefix (str): A prefix used to name and organize the output files.
             jobstarter (JobStarter, optional): An instance of the JobStarter class, which manages job execution. Defaults to None.
             nseq (int, optional): The number of sequences to generate for each input pose. Defaults to None.
-            model_type (str, optional): The type of model to use. Defaults to 'ligand_mpnn'.
             options (str, optional): Additional options for the GNINA script. Defaults to None.
             pose_options (object, optional): Pose-specific options for the GNINA script. Defaults to None.
-            fixed_res_col (str, optional): Column name in the poses DataFrame specifying fixed residues. Defaults to None.
-            design_res_col (str, optional): Column name in the poses DataFrame specifying residues to be redesigned. Defaults to None.
             return_seq_threaded_pdbs_as_pose (bool, optional): If True, return sequence-threaded PDBs as poses. Defaults to False.
             preserve_original_output (bool, optional): If True, preserve the original output files. Defaults to True.
             overwrite (bool, optional): If True, overwrite existing output files. Defaults to False.
